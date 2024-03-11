@@ -1,0 +1,187 @@
+.destination{
+    flex: 1;
+    width: 100%;
+    background-image: url('../../assets/destination/background-destination-mobile.jpg');
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+
+    .destination-body{
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: #d0d6f9;
+        text-transform: uppercase;
+        padding-inline: 1rem;
+        padding: 1rem 2rem;
+        gap: 2rem;
+
+
+        .destination-subheading-01{
+            width: 100%;
+            /* padding-inline-start: 2rem; */
+            font-family: 'barlow condensed regular';
+            letter-spacing: 2px;
+            color: #ffffff;
+
+            b{
+                color: #838488;
+            }
+        }
+
+        .destination-content{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding-block: 1rem;
+            align-items: center;
+            gap: 2rem;
+
+            .destination-image{
+                width: 100%;
+                height: 200px;
+                text-align: center;
+
+                img{
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .destination-text-content{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 1rem;
+                align-items: center;
+
+                .destination-tags{
+                    display: flex;
+                    gap: 1rem;
+                    
+                    & span{
+                        line-height: 2rem;
+                        border-bottom: 2px solid transparent;
+                        font-family: 'barlow condensed regular';
+                        letter-spacing: 2.7px;
+
+                        &.isActive{
+                            border-bottom: 2px solid #d0d6f9;
+                        }
+
+
+                        &:hover{
+                            border-bottom-color: #d0d6f9;
+                            cursor: pointer;
+                        }
+
+                       
+                    }
+                }
+
+                .destination-title{
+                    font-size: 56px;
+                    font-family: 'bellefair regular';
+                    color: #ffffff;
+                }
+
+                .destination-text-01{
+                    text-align: center;
+                }
+
+                .destination-text-footer{
+                    border-top: 1px solid ;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 2rem;
+                    gap: 2rem;
+
+                    .destination-calculated-data{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.8rem;
+                        align-items: center;
+
+                        .destination-calculated-data-01{
+                            font-size: 14px;
+                            letter-spacing: 2.35px;
+                            font-family: 'barlow condensed regular';
+                        }
+
+                        .destination-calculated-data-02{
+                            font-size: 28px;
+                            font-family: 'bllefari regular';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* for tablet */
+@media only screen and (min-width: 600px) and (max-width: 992px){
+    .destination{
+        background-image: url('../../assets/destination/background-destination-tablet.jpg');
+
+        .destination-body{
+            padding-inline: 4rem;
+
+            .destination-content{
+
+                .destination-text-content{
+
+                    .destination-text-footer{
+                        flex-direction: row;
+                        justify-content: center;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* for destop  */
+@media only screen and (min-width: 992px){
+    .destination{
+        background-image: url('../../assets/destination/background-destination-desktop.jpg');
+
+        .destination-body{
+            padding-inline: 6rem;
+
+            .destination-content{
+                flex-direction: row;
+
+                .destination-image{
+                    flex: 1.5;
+                    height: 400px;
+                }
+
+                .destination-text-content{
+                    align-items: flex-start;
+
+                    .destination-text-01{
+                        text-align: left;
+                    }
+
+                    .destination-text-footer{
+                        flex-direction: row;
+                        
+                        .destination-calculated-data{
+                            align-items: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

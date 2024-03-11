@@ -1,0 +1,221 @@
+.crew{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../assets/crew/background-crew-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+
+
+    .crew-container{
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: inherit;
+        padding-inline: 1rem;
+        text-transform: uppercase;
+        align-items: center;
+
+        .crew-heading{
+            color: #ffffff;
+            font-family: 'bellefair regular';
+            letter-spacing: 2px;
+            padding-top: 1rem;
+            padding-left: 1rem;
+            text-align: center;
+            width: 100%;
+
+            b{
+                color: #838488;
+            }
+        }
+
+        .crew-content{
+            width: 100%;
+            flex: 1;
+            display: flex; 
+            flex-direction: inherit;
+
+            .crew-text-container{
+                padding-top: 1rem;
+                flex: 1;
+                width: 100%;
+                order: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                color: #d0d6f9;
+                justify-content: center;
+
+                .crew-text-content{
+                    width: 100%;
+                    order: 2;
+                    display: flex;
+                    flex-direction: inherit;
+                    align-items: inherit;
+                    font-family: 'barlow condensed regular';
+
+                    .crew-title-01{
+                        font-size: 28px;
+                        color: #0b0d17;
+                    }
+
+                    .crew-title-02{
+                        font-size: 32px;
+                        color: #ffffff;
+                        margin-bottom: 1rem;
+                    }
+
+                    .crew-text-para{
+                        text-align: center;
+                        text-transform: none;
+                        font-family: sans-serif;
+                    }
+
+                }
+
+                .crew-slideshow-button-container{
+                    order: 1;
+                    display: flex;
+                    gap: 1rem;
+
+                    .slideshow-button{
+                        width: 0.9rem;
+                        height: 0.9rem;
+                        border-radius: 50%;
+                        background-color: #282b3a;
+                        cursor: pointer;
+
+
+                        &:hover{
+                            background-color: #d0d6f9;
+                        }
+                    }
+                }
+            }
+
+            .crew-image-container{
+                flex: 1;
+                width: 100%;
+                order: 1;
+                padding-top: 1rem;
+
+                img{
+                    object-fit: contain;
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+/* for tablets */
+@media only screen and (width >= 600px) and (width<= 992px){
+    .crew{
+        background-image: url('../../assets/crew/background-crew-tablet.jpg');
+
+        .crew-container{
+
+            .crew-heading{
+                text-align: left;
+            }
+
+            .crew-content{
+
+                .crew-text-container{
+                    padding-inline: 2rem;
+                    order: 1;
+
+                    .crew-text-content{
+                        order: 1;
+
+                        
+                    }
+
+                    .crew-slideshow-button-container{
+                        order: 2;
+                    }
+                }
+
+                .crew-image-container{
+                    order: 2;
+
+                    img{
+                        object-fit: contain;
+                        width: 100%;
+                        height: 350px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* for desktop */
+@media only screen and (width > 992px){
+    .crew{
+        background-image: url('../../assets/crew/background-crew-desktop.jpg');
+
+        .crew-container{
+            align-items: flex-start;
+
+            .crew-heading{
+                text-align: left;
+                padding-inline: 4rem;
+                font-size: 28px;
+            }
+
+            .crew-content{
+                flex-direction: row;
+
+                .crew-text-container{
+                    order: 1;
+                    padding-inline: 4rem 0;
+                    align-items: flex-start;
+
+                    .crew-text-content{
+                        order: 1;
+
+                        .crew-title-01{
+                            font-size: 32px;
+                            color: #0b0d17;
+                        }
+    
+                        .crew-title-02{
+                            font-size: 56px;
+                            color: #ffffff;
+                            margin-bottom: 1rem;
+                        }
+
+                        .crew-text-para{
+                            text-align: left;
+                        }
+                    }
+
+                    .crew-slideshow-button-container{
+                        margin-top: 2rem;
+                        order: 2;
+                    }
+                }
+
+                .crew-image-container{
+
+                    order: 2;
+
+                    img{
+                        object-fit: contain;
+                        width: 100%;
+                        height: 450px;
+                    }
+                }
+            }
+        }
+    }
+}

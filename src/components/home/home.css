@@ -1,0 +1,122 @@
+.home {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../assets/home/background-home-mobile.jpg');
+    background-size: cover;
+
+    .home-body {
+        flex: 1;
+        display: flex;
+        color: #d0d6f9;
+        text-transform: uppercase;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-bottom: 4rem;
+        padding-inline: 2rem;
+
+
+        .text-content {
+            padding-block: 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+
+            .home-subheading-1 {
+                font-family: 'barlow condensed regular';
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+
+            .home-heading {
+                font-family: 'bellefair regular';
+                font-size: 56px;
+                /* letter-spacing: 4.75c; */
+                color: #ffffff;
+            }
+        }
+
+        .exploreCircle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0b0d17;
+            font-size: 28px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                box-shadow: 0 0 5px 70px #0b0d1792;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+/* for tablet view */
+@media only screen and (min-width : 600px) and (max-width: 992px) {
+    .home {
+        background-image: url('../../assets/home/background-home-tablet.jpg');
+
+        .home-body {
+            flex-direction: column;
+            padding-inline: 4rem;
+
+
+            .text-content {
+                .home-subheading-1 {
+                    font-size: 28px;
+                }
+
+                .home-heading {
+                    font-size: 150px;
+                }
+            }
+
+            .exploreCircle{
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+
+}
+
+/* for desktop view */
+@media only screen and (min-width : 992px) {
+    .home {
+        background-image: url('../../assets/home/background-home-desktop.jpg');
+
+        .home-body {
+            flex-direction: row;
+            padding-inline: 6rem;
+
+            .text-content {
+                width: 400px;
+
+                .home-subheading-1 {
+                    font-size: 28px;
+                }
+
+                .home-heading {
+                    font-size: 150px;
+                }
+            }
+
+            .exploreCircle{
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+
+
+}
