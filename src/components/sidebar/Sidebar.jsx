@@ -5,20 +5,24 @@ import './sidebar.css'
 import close from '../../assets/shared/icon-close.svg';
 
 
-function Sidebar({handleOpenSidebar}) {
+function Sidebar({ handleOpenSidebar }) {
 
-    const linksList = ['/', 'destination', 'crew', 'technology'];
-    const {pathname} = useLocation();
-    const path = pathname.length > 1 ? pathname.slice(1) : pathname;
+    const linksList = ['/', '/destination', '/crew', '/technology'];
+    const { pathname } = useLocation();
 
     return (
         <div className='mobile-sidebar' >
             <div className='icon-container' >
-                <img src={close} alt="close"  onClick={handleOpenSidebar}/>
+                <img src={close} alt="close" onClick={handleOpenSidebar} />
             </div>
 
             <ul className="links">
-                {linksList.map((link, index) => <li key={link === '/' ? 'home' : link}><a href={link} className={path === link ? 'isActive' : ''} ><b>0{index} </b>{link === '/' ? 'home' : link}</a> </li>)}
+                {linksList.map((link, index) => <li key={link === '/' ? 'home' : link.slice(1)}>
+                    <a href={link} className={pathname === link ? 'isActive' : ''} >
+                        <b>0{index}&ensp;</b>
+                        {link === '/' ? 'home' : link.slice(1)}
+                    </a> 
+                </li>)}
             </ul>
 
         </div>
