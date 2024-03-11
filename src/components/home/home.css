@@ -34,7 +34,7 @@
             .home-heading {
                 font-family: 'bellefair regular';
                 font-size: 56px;
-                /* letter-spacing: 4.75c; */
+                letter-spacing: 2px;
                 color: #ffffff;
             }
         }
@@ -72,12 +72,13 @@
 
 
             .text-content {
+
                 .home-subheading-1 {
                     font-size: 28px;
                 }
 
                 .home-heading {
-                    font-size: 150px;
+                    font-size: 100px;
                 }
             }
 
@@ -98,9 +99,10 @@
         .home-body {
             flex-direction: row;
             padding-inline: 6rem;
+            padding-bottom: 0;
 
             .text-content {
-                width: 400px;
+                max-width: 500px;
 
                 .home-subheading-1 {
                     font-size: 28px;
