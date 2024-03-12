@@ -9,26 +9,28 @@ import Destination from './components/destination/Destination';
 import Crew from './components/crew/Crew';
 import Technology from './components/technology/Technology';
 import './index.css'
+import {Errorpage} from './components/errorpage/Errorpage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
+    <>
     <Route path='/' element={<App />}>
       <Route index element={<Home/>} />
       <Route path='destination' element={<Destination/>} />
       <Route path='crew' element={<Crew/>} />
       <Route path='technology' element={<Technology/>} />
     </Route>
+    <Route path='/*' element={<Errorpage/>} />
+    </>
   )
 )
 
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={Router}>
-      <App />
-    </RouterProvider>
+    <RouterProvider router={Router} />
   </React.StrictMode>
 );
 

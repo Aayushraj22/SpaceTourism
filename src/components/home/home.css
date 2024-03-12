@@ -5,8 +5,9 @@
     flex-direction: column;
     background-image: url('../../assets/home/background-home-mobile.jpg');
     background-size: cover;
+    background-position: center;
 
-    .home-body {
+    & .home-body {
         flex: 1;
         display: flex;
         color: #d0d6f9;
@@ -66,8 +67,7 @@
     .home {
         background-image: url('../../assets/home/background-home-tablet.jpg');
 
-        .home-body {
-            flex-direction: column;
+        & .home-body {
             padding-inline: 4rem;
 
 
@@ -96,7 +96,7 @@
     .home {
         background-image: url('../../assets/home/background-home-desktop.jpg');
 
-        .home-body {
+        & .home-body {
             flex-direction: row;
             padding-inline: 6rem;
             padding-bottom: 0;
